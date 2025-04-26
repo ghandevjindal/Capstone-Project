@@ -137,6 +137,7 @@ header{
     margin-bottom: 3.125rem;
 }
 
+
 /* Section Heading */
 .section-heading{
     text-align: center;
@@ -156,6 +157,7 @@ header{
     text-transform: capitalize;
     color: var(--text-color);
 }
+
 
 /* Services */
 .service-item{
@@ -250,6 +252,7 @@ header{
     background-color: var(--primary-color);
 }
 
+
 /* About Us */
 .about-us{
     margin-top: 3%;
@@ -282,9 +285,54 @@ header{
     font-weight: 600 !important;
 }
 
+
+/* Learning Plan Form */
+.Learning-Plan{
+    margin-top: 5%;
+    display: flex;
+    background-image: url(/assets/images/plan-bg.png);
+}
+
+.plan-img img{
+    height: 90%;
+    width: 60%;
+}
+
+.learning-form{
+    margin-top: 85px;
+    margin-right: 50px;
+}
+
+.learning-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.learning-form form>div{
+    margin-bottom: 25px;
+}
+
+.learning-form .section-heading h4,
+.learning-form label{
+    color: var(--bg-color);
+}
+
+.learning-form input,
+.learning-form select{
+    background-color: grey;
+    border: none;color: var(--bg-color);
+}
+
+.learning-form button{
+    background-color: var(--primary-color);
+    border: none;
+    margin-bottom: 25px;
+}
+
+
 /* testimonials */
 .testimonials{
-    margin-top: 1%;
+    margin-top: 10%;
     width: 95%;
     margin-left: 1.7rem;
 }
@@ -352,11 +400,100 @@ header{
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
-    filter: invert(1);
+    filter: invert(0);
+    border-radius: 50%;
+    background-color: goldenrod;
 }
 
-/* Responsiveness */
 
+/* Contact Us */
+.map{
+    margin: 0;
+}
+
+.map iframe{
+    width: 100%;
+}
+
+.connection{
+    display: flex;
+    margin-top: -10%;
+    
+}
+
+.connection .email,
+.connection .phone,
+.connection .address{
+    background-color: var(--bg-color);
+    margin: 0 4%;
+    padding: 2% 2%;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.connection i,
+.colorclass{
+    color: #177245;
+}
+
+.connection i, .connection h5{
+    font-weight: bold;
+    margin: 5% 0;
+}
+
+.connection i{
+    font-size: 2rem;
+}
+
+.email, .phone, .address {
+    text-align: center;
+}
+
+
+/* Inquiry Form */
+.Inquiry-Plan{
+    margin: 10% 2%;
+    margin-bottom: 2px;
+}
+
+.inquiry-form form{
+    margin: 0% 20%;
+}
+
+.inquiry-form form .form-group .form-control{
+    margin: 5% 0;
+    background-color: rgb(202, 201, 201);
+    height: 4rem;
+}
+
+#Inquiry-Area{
+    height: 10rem;
+}
+
+.inquiry-form form button{
+    background-color: var(--primary-color);
+    border: none;
+    height: 3rem;
+}
+
+
+/* Footer */
+.footer{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 2%;
+}
+
+.footer p{
+    text-align: center;
+}
+
+.footer em{
+    color: var(--primary-color);
+}
+
+
+/* Responsiveness */
 @media (max-width: 990px) {
     /* hero */
     .hero{
@@ -411,6 +548,80 @@ header{
         margin-right: 0;
         margin-bottom: 1rem;
     }
+
+    .Learning-Plan .plan-img{
+        display: none;
+    }
+
+    .learning-form{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .learning-form form>div{
+        margin-bottom: 0px;
+    }
+
+    .learning-form form .form-control{
+        margin-bottom: 25px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        display: none;
+    }
+
+    .testimonials{
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .testimonial-card {
+        flex-direction: column;
+        position: relative;
+      }
+    
+    .testimonial-card .content {
+        order: 0;
+        padding-top: 2.5rem;
+      }
+    
+    .testimonial-card .content i {
+        position: absolute;
+        top: -1rem;
+        left: 1rem;
+        font-size: 1rem;
+      }
+    
+    .testimonial-card .image-container {
+        order: 1;
+        position: absolute;
+        top: -2rem;
+        right: 1rem;
+        width: 60px;
+        height: 60px;
+      }
+    
+    .testimonial-card .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20%;
+      }
+
+
+    .connection{
+        display: flex;
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .connection .email,
+    .connection .phone,
+    .connection .address{
+        margin: 2% 4%;
+    }
+
 }
 
 @media (max-width: 560px) {
